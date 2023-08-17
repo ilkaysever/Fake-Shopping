@@ -9,11 +9,32 @@
 /* Begin PBXBuildFile section */
 		6BE1A6242A8E2D99004747C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6232A8E2D99004747C1 /* AppDelegate.swift */; };
 		6BE1A6262A8E2D99004747C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6252A8E2D99004747C1 /* SceneDelegate.swift */; };
-		6BE1A6282A8E2D99004747C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6272A8E2D99004747C1 /* ViewController.swift */; };
-		6BE1A62B2A8E2D99004747C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A6292A8E2D99004747C1 /* Main.storyboard */; };
+		6BE1A6282A8E2D99004747C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6272A8E2D99004747C1 /* HomeViewController.swift */; };
 		6BE1A62E2A8E2D99004747C1 /* ypk_case.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A62C2A8E2D99004747C1 /* ypk_case.xcdatamodeld */; };
 		6BE1A6302A8E2D9A004747C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A62F2A8E2D9A004747C1 /* Assets.xcassets */; };
 		6BE1A6332A8E2D9A004747C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A6312A8E2D9A004747C1 /* LaunchScreen.storyboard */; };
+		6BE1A6432A8E49B5004747C1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6422A8E49B5004747C1 /* BaseViewController.swift */; };
+		6BE1A6452A8E49BF004747C1 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6442A8E49BF004747C1 /* BaseTabbarController.swift */; };
+		6BE1A6472A8E49CE004747C1 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6462A8E49CE004747C1 /* BaseNavigationController.swift */; };
+		6BE1A6492A8E4A19004747C1 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6482A8E4A19004747C1 /* AppColors.swift */; };
+		6BE1A6532A8E4A6B004747C1 /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A64B2A8E4A6B004747C1 /* Ubuntu-MediumItalic.ttf */; };
+		6BE1A6542A8E4A6B004747C1 /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A64C2A8E4A6B004747C1 /* Ubuntu-LightItalic.ttf */; };
+		6BE1A6552A8E4A6B004747C1 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A64D2A8E4A6B004747C1 /* Ubuntu-Medium.ttf */; };
+		6BE1A6562A8E4A6B004747C1 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A64E2A8E4A6B004747C1 /* Ubuntu-Light.ttf */; };
+		6BE1A6572A8E4A6B004747C1 /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A64F2A8E4A6B004747C1 /* Ubuntu-BoldItalic.ttf */; };
+		6BE1A6582A8E4A6B004747C1 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A6502A8E4A6B004747C1 /* Ubuntu-Regular.ttf */; };
+		6BE1A6592A8E4A6B004747C1 /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A6512A8E4A6B004747C1 /* Ubuntu-Bold.ttf */; };
+		6BE1A65A2A8E4A6B004747C1 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1A6522A8E4A6B004747C1 /* Ubuntu-Italic.ttf */; };
+		6BE1A65C2A8E4B2F004747C1 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A65B2A8E4B2F004747C1 /* AppFonts.swift */; };
+		6BE1A6602A8E4D17004747C1 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A65F2A8E4D17004747C1 /* BasketViewController.swift */; };
+		6BE1A6632A8E4D47004747C1 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6622A8E4D47004747C1 /* SplashScreen.swift */; };
+		6BE1A6662A8E4D69004747C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6652A8E4D69004747C1 /* LoginViewController.swift */; };
+		6BE1A6682A8E4D77004747C1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6672A8E4D77004747C1 /* RegisterViewController.swift */; };
+		6BE1A66A2A8E51F4004747C1 /* CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6692A8E51F4004747C1 /* CellHelper.swift */; };
+		6BE1A66F2A8E5BE1004747C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A66E2A8E5BE1004747C1 /* UIView+Extension.swift */; };
+		6BE1A6732A8E6151004747C1 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6722A8E6151004747C1 /* NetworkHelper.swift */; };
+		6BE1A6752A8E615E004747C1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6742A8E615E004747C1 /* NetworkManager.swift */; };
+		6BE1A6772A8E61BE004747C1 /* TrialRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1A6762A8E61BE004747C1 /* TrialRequest.swift */; };
 		D2FE60095165B00B53349C14 /* Pods_ypk_case.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D9481659DE8F0A8C0188AD /* Pods_ypk_case.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +43,33 @@
 		6BE1A6202A8E2D99004747C1 /* ypk_case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ypk_case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE1A6232A8E2D99004747C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE1A6252A8E2D99004747C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6BE1A6272A8E2D99004747C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6BE1A62A2A8E2D99004747C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BE1A6272A8E2D99004747C1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6BE1A62D2A8E2D99004747C1 /* ypk_case.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ypk_case.xcdatamodel; sourceTree = "<group>"; };
 		6BE1A62F2A8E2D9A004747C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BE1A6322A8E2D9A004747C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BE1A6342A8E2D9A004747C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE1A6422A8E49B5004747C1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6BE1A6442A8E49BF004747C1 /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		6BE1A6462A8E49CE004747C1 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		6BE1A6482A8E4A19004747C1 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		6BE1A64B2A8E4A6B004747C1 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6BE1A64C2A8E4A6B004747C1 /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		6BE1A64D2A8E4A6B004747C1 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		6BE1A64E2A8E4A6B004747C1 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		6BE1A64F2A8E4A6B004747C1 /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6BE1A6502A8E4A6B004747C1 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		6BE1A6512A8E4A6B004747C1 /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		6BE1A6522A8E4A6B004747C1 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		6BE1A65B2A8E4B2F004747C1 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		6BE1A65F2A8E4D17004747C1 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		6BE1A6622A8E4D47004747C1 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		6BE1A6652A8E4D69004747C1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6BE1A6672A8E4D77004747C1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6BE1A6692A8E51F4004747C1 /* CellHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellHelper.swift; sourceTree = "<group>"; };
+		6BE1A66E2A8E5BE1004747C1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6BE1A6722A8E6151004747C1 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		6BE1A6742A8E615E004747C1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6BE1A6762A8E61BE004747C1 /* TrialRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialRequest.swift; sourceTree = "<group>"; };
 		B18F7A5FE6D771152A9E84FE /* Pods-ypk_case.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ypk_case.debug.xcconfig"; path = "Target Support Files/Pods-ypk_case/Pods-ypk_case.debug.xcconfig"; sourceTree = "<group>"; };
 		B1CDD8D280AF1483A6350494 /* Pods-ypk_case.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ypk_case.release.xcconfig"; path = "Target Support Files/Pods-ypk_case/Pods-ypk_case.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +130,8 @@
 		6BE1A63A2A8E337F004747C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				6BE1A6702A8E6138004747C1 /* Core */,
+				6BE1A6712A8E613E004747C1 /* Request */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -95,9 +139,11 @@
 		6BE1A63B2A8E3387004747C1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6BE1A6272A8E2D99004747C1 /* ViewController.swift */,
-				6BE1A6292A8E2D99004747C1 /* Main.storyboard */,
 				6BE1A6312A8E2D9A004747C1 /* LaunchScreen.storyboard */,
+				6BE1A6612A8E4D20004747C1 /* Splash */,
+				6BE1A6642A8E4D52004747C1 /* LoginRegister */,
+				6BE1A65D2A8E4CEE004747C1 /* Home */,
+				6BE1A65E2A8E4CF6004747C1 /* Basket */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -105,6 +151,9 @@
 		6BE1A63C2A8E338E004747C1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6BE1A6422A8E49B5004747C1 /* BaseViewController.swift */,
+				6BE1A6442A8E49BF004747C1 /* BaseTabbarController.swift */,
+				6BE1A6462A8E49CE004747C1 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -112,6 +161,7 @@
 		6BE1A63D2A8E3395004747C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6BE1A66E2A8E5BE1004747C1 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,6 +169,7 @@
 		6BE1A63E2A8E339F004747C1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6BE1A6692A8E51F4004747C1 /* CellHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -126,8 +177,10 @@
 		6BE1A63F2A8E33A7004747C1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6BE1A6252A8E2D99004747C1 /* SceneDelegate.swift */,
 				6BE1A6232A8E2D99004747C1 /* AppDelegate.swift */,
+				6BE1A6252A8E2D99004747C1 /* SceneDelegate.swift */,
+				6BE1A6482A8E4A19004747C1 /* AppColors.swift */,
+				6BE1A65B2A8E4B2F004747C1 /* AppFonts.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -135,8 +188,9 @@
 		6BE1A6402A8E33B5004747C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6BE1A6342A8E2D9A004747C1 /* Info.plist */,
+				6BE1A64A2A8E4A53004747C1 /* Fonts */,
 				6BE1A6412A8E33E3004747C1 /* Assets */,
+				6BE1A6342A8E2D9A004747C1 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -149,13 +203,77 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		6BE1A64A2A8E4A53004747C1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A6512A8E4A6B004747C1 /* Ubuntu-Bold.ttf */,
+				6BE1A64F2A8E4A6B004747C1 /* Ubuntu-BoldItalic.ttf */,
+				6BE1A6522A8E4A6B004747C1 /* Ubuntu-Italic.ttf */,
+				6BE1A64E2A8E4A6B004747C1 /* Ubuntu-Light.ttf */,
+				6BE1A64C2A8E4A6B004747C1 /* Ubuntu-LightItalic.ttf */,
+				6BE1A64D2A8E4A6B004747C1 /* Ubuntu-Medium.ttf */,
+				6BE1A64B2A8E4A6B004747C1 /* Ubuntu-MediumItalic.ttf */,
+				6BE1A6502A8E4A6B004747C1 /* Ubuntu-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6BE1A65D2A8E4CEE004747C1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A6272A8E2D99004747C1 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6BE1A65E2A8E4CF6004747C1 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A65F2A8E4D17004747C1 /* BasketViewController.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		6BE1A6612A8E4D20004747C1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A6622A8E4D47004747C1 /* SplashScreen.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		6BE1A6642A8E4D52004747C1 /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A6652A8E4D69004747C1 /* LoginViewController.swift */,
+				6BE1A6672A8E4D77004747C1 /* RegisterViewController.swift */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		6BE1A6702A8E6138004747C1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A6722A8E6151004747C1 /* NetworkHelper.swift */,
+				6BE1A6742A8E615E004747C1 /* NetworkManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6BE1A6712A8E613E004747C1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6BE1A6762A8E61BE004747C1 /* TrialRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		CB82415D0716130730ED7CEB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B18F7A5FE6D771152A9E84FE /* Pods-ypk_case.debug.xcconfig */,
 				B1CDD8D280AF1483A6350494 /* Pods-ypk_case.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,9 +337,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE1A6582A8E4A6B004747C1 /* Ubuntu-Regular.ttf in Resources */,
+				6BE1A6542A8E4A6B004747C1 /* Ubuntu-LightItalic.ttf in Resources */,
+				6BE1A6572A8E4A6B004747C1 /* Ubuntu-BoldItalic.ttf in Resources */,
+				6BE1A65A2A8E4A6B004747C1 /* Ubuntu-Italic.ttf in Resources */,
+				6BE1A6552A8E4A6B004747C1 /* Ubuntu-Medium.ttf in Resources */,
 				6BE1A6332A8E2D9A004747C1 /* LaunchScreen.storyboard in Resources */,
 				6BE1A6302A8E2D9A004747C1 /* Assets.xcassets in Resources */,
-				6BE1A62B2A8E2D99004747C1 /* Main.storyboard in Resources */,
+				6BE1A6562A8E4A6B004747C1 /* Ubuntu-Light.ttf in Resources */,
+				6BE1A6532A8E4A6B004747C1 /* Ubuntu-MediumItalic.ttf in Resources */,
+				6BE1A6592A8E4A6B004747C1 /* Ubuntu-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +399,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE1A6432A8E49B5004747C1 /* BaseViewController.swift in Sources */,
+				6BE1A6472A8E49CE004747C1 /* BaseNavigationController.swift in Sources */,
+				6BE1A66F2A8E5BE1004747C1 /* UIView+Extension.swift in Sources */,
+				6BE1A6662A8E4D69004747C1 /* LoginViewController.swift in Sources */,
 				6BE1A62E2A8E2D99004747C1 /* ypk_case.xcdatamodeld in Sources */,
-				6BE1A6282A8E2D99004747C1 /* ViewController.swift in Sources */,
+				6BE1A65C2A8E4B2F004747C1 /* AppFonts.swift in Sources */,
+				6BE1A6772A8E61BE004747C1 /* TrialRequest.swift in Sources */,
+				6BE1A6452A8E49BF004747C1 /* BaseTabbarController.swift in Sources */,
+				6BE1A6282A8E2D99004747C1 /* HomeViewController.swift in Sources */,
+				6BE1A6732A8E6151004747C1 /* NetworkHelper.swift in Sources */,
+				6BE1A6632A8E4D47004747C1 /* SplashScreen.swift in Sources */,
+				6BE1A6752A8E615E004747C1 /* NetworkManager.swift in Sources */,
+				6BE1A6602A8E4D17004747C1 /* BasketViewController.swift in Sources */,
+				6BE1A66A2A8E51F4004747C1 /* CellHelper.swift in Sources */,
+				6BE1A6492A8E4A19004747C1 /* AppColors.swift in Sources */,
+				6BE1A6682A8E4D77004747C1 /* RegisterViewController.swift in Sources */,
 				6BE1A6242A8E2D99004747C1 /* AppDelegate.swift in Sources */,
 				6BE1A6262A8E2D99004747C1 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,14 +423,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6BE1A6292A8E2D99004747C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BE1A62A2A8E2D99004747C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6BE1A6312A8E2D9A004747C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -431,13 +562,12 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ilkaysever.ypk-case";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -460,13 +590,12 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ilkaysever.ypk-case";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
