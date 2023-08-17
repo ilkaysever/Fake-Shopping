@@ -9,13 +9,19 @@ import UIKit
 
 final class SplashScreen: BaseViewController {
     
+    // MARK: - UI Components
+    
     private let splashImg: UIImageView = UIImageView()
     private let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    // MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
+    
+    // MARK: - Configure UI Elements
     
     private func configureUI() {
         view.addSubviews(splashImg, indicator)
@@ -36,6 +42,7 @@ final class SplashScreen: BaseViewController {
     
 }
 
+// MARK: - UI Components Constraints Extension
 extension SplashScreen {
     
     private func createSplashImg() {

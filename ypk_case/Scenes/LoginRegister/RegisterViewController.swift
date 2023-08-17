@@ -7,11 +7,13 @@
 
 import UIKit
 
-final class RegisterViewController: UIViewController {
+final class RegisterViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        navigationTitle(title: "Üye Ol")
+        addRightButton(selector: #selector(didTappedDismiss), image: "close_icon")
+        //setupUI()
     }
 
 
