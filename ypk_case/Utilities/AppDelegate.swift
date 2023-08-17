@@ -18,9 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         configureIQKeyboard()
-        //openSplashPage()
         return true
+    }
+    
+    func setRootViewController(window: UIWindow, viewController: UIViewController, withAnimation: Bool) {
+        if !withAnimation {
+            window.rootViewController = viewController
+            window.makeKeyAndVisible()
+            return
+        }
+        if let snapshot = window.snapshotView(afterScreenUpdates: true) {
+            viewController.view.addSubview(snapshot)
+            window.rootViewController = viewController
+            window.makeKeyAndVisible()
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                snapshot.layer.opacity = 0
+            }, completion: { _ in
+                snapshot.removeFromSuperview()
+            })
+        }
     }
     
     func openSplashPage() {
@@ -40,16 +59,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func openMainPage() {
-        UIView.transition(with: window!, duration: 0.85, options: .transitionFlipFromRight, animations: {
-            UIView.performWithoutAnimation {
-                let storyboard = UIStoryboard(name: "Home", bundle: nil)
-                let rootController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-                let navController = BaseNavigationController(rootViewController: rootController)
-                if let window = self.window {
-                    window.rootViewController = navController
-                }
-            }
-        }, completion: nil)
+        setRootViewController(window: UIWindow.key!, viewController: HomeViewController(), withAnimation: true)
+        //        UIView.transition(with: window!, duration: 0.85, options: .transitionFlipFromRight, animations: {
+        //            UIView.performWithoutAnimation {
+        //                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        //                let rootController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+        //                let navController = BaseNavigationController(rootViewController: rootController)
+        //                if let window = self.window {
+        //                    window.rootViewController = navController
+        //                }
+        //            }
+        //        }, completion: nil)
     }
     
     // MARK: - IQKeyboardManager

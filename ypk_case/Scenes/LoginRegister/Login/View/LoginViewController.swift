@@ -10,15 +10,13 @@ import UIKit
 final class LoginViewController: BaseViewController {
     
     // MARK: - UI Components
-    
     private let welcomeLabel: UILabel = UILabel()
     private let titleLabel: UILabel = UILabel()
     private let backgroundImg: UIImageView = UIImageView()
     private let logoImg: UIImageView = UIImageView()
-    private let loginStackView: UIStackView = UIStackView()
-    private let emailContainer: UIView = UIView()
+    private let userNameContainer: UIView = UIView()
     private let emailLogo: UIImageView = UIImageView()
-    private let emailTxtField: UITextField = UITextField()
+    private let userNameTxtField: UITextField = UITextField()
     private let passwordContainer: UIView = UIView()
     private let passwordLogo: UIImageView = UIImageView()
     private let passwordTxtField: UITextField = UITextField()
@@ -26,8 +24,11 @@ final class LoginViewController: BaseViewController {
     private let loginButton: UIButton = UIButton()
     
     
-    // MARK: - ViewController Life Cycle
+    // MARK: - Variables
+    let viewModel = LoginViewModel()
     
+    
+    // MARK: - ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -39,24 +40,33 @@ final class LoginViewController: BaseViewController {
     }
     
     // MARK: - Configure UI Elements
-    
     private func configureUI() {
-        view.addSubviews(backgroundImg, welcomeLabel, titleLabel, logoImg, /*loginStackView*/ emailContainer, passwordContainer, loginButton, registerLabel)
+        userNameContainer.addSubviews(emailLogo)
+        view.addSubviews(backgroundImg, welcomeLabel, titleLabel, logoImg, userNameContainer, passwordContainer, loginButton, registerLabel)
+        userNameContainer.addSubviews(userNameTxtField)
+        passwordContainer.addSubviews(passwordTxtField)
         drawDesign()
     }
     
     private func drawDesign() {
         DispatchQueue.main.async {
             self.view.backgroundColor = AppColors.white
-            self.createBackground()
-            self.createWelcomeTitle()
-            self.createTitle()
-            self.createLogo()
-            //self.createLoginStack()
-            self.createEmailView()
-            self.createPasswordView()
-            self.createLoginButton()
-            self.createRegisterLabel()
+            self.mainView()
+            self.userNameField()
+            self.passwordField()
+            self.loginRegisterFields()
+        }
+    }
+    
+    // MARK: - Request
+    private func loginRequest(username: String, password: String) {
+        viewModel.loginRequest(username: username, password: password)
+        viewModel.didSuccess = {
+            //print(self.viewModel.getToken())
+            AppDelegate.shared?.openMainPage()
+        }
+        viewModel.didFailure = { error in
+            print(error)
         }
     }
     
@@ -78,7 +88,7 @@ final class LoginViewController: BaseViewController {
     }
     
     @objc private func didTappedLogin() {
-        print("login basıldı")
+        loginRequest(username: "mor_2314", password: "83r5^_")
     }
     
 }
@@ -86,7 +96,8 @@ final class LoginViewController: BaseViewController {
 // MARK: - UI Components Constraints Extension
 extension LoginViewController {
     
-    private func createBackground() {
+    private func mainView() {
+        // Background Image
         backgroundImg.image = UIImage(named: "login_register_rectangle")
         backgroundImg.contentMode = .scaleAspectFill
         backgroundImg.backgroundColor = .clear
@@ -94,9 +105,8 @@ extension LoginViewController {
             make.top.bottom.equalToSuperview()
             make.left.right.equalToSuperview()
         }
-    }
-    
-    private func createWelcomeTitle() {
+        
+        // Welcome Title
         welcomeLabel.text = "Welcome to"
         welcomeLabel.textAlignment = .center
         welcomeLabel.textColor = AppColors.backgroundColor
@@ -106,9 +116,8 @@ extension LoginViewController {
             make.left.equalToSuperview().offset(32)
             make.right.equalToSuperview().offset(-32)
         }
-    }
-    
-    private func createTitle() {
+        
+        // Brand Title
         titleLabel.text = "Yapı Kredi Teknoloji Case"
         titleLabel.textAlignment = .center
         titleLabel.textColor = AppColors.backgroundColor
@@ -118,58 +127,92 @@ extension LoginViewController {
             make.left.equalToSuperview().offset(32)
             make.right.equalToSuperview().offset(-32)
         }
-    }
-    
-    private func createLogo() {
+        
+        // Main Logo Image
         logoImg.image = UIImage(named: "hero_logo")
         logoImg.contentMode = .scaleAspectFill
         logoImg.backgroundColor = .clear
         logoImg.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.top).offset(32)
+            make.top.equalTo(titleLabel.snp.bottom).offset(32)
             make.width.height.equalTo(170)
             make.centerX.equalToSuperview()
         }
     }
     
-    //    private func createLoginStack() {
-    //        loginStackView.backgroundColor = .red
-    //        loginStackView.alignment = .fill
-    //        loginStackView.axis = .vertical
-    //        loginStackView.distribution = .fillEqually
-    //        loginStackView.spacing = 8
-    //        loginStackView.snp.makeConstraints { make in
-    //            make.top.equalTo(logoImg.snp.bottom).offset(24)
-    //            make.left.equalToSuperview().offset(16)
-    //            make.right.equalToSuperview().offset(-16)
-    //            make.bottom.equalToSuperview().offset(-24)
-    //        }
-    //    }
-    
-    private func createEmailView() {
-        emailContainer.backgroundColor = .clear
-        emailContainer.addCornerRadius(radius: 8)
-        emailContainer.addBorderView(width: 1, color: AppColors.borderColor)
-        emailContainer.snp.makeConstraints { make in
+    private func userNameField() {
+        // User Name ContainerView
+        userNameContainer.backgroundColor = .clear
+        userNameContainer.addCornerRadius(radius: 8)
+        userNameContainer.addBorderView(width: 1, color: AppColors.borderColor)
+        userNameContainer.snp.makeConstraints { make in
             make.top.equalTo(logoImg.snp.bottom).offset(32)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
             make.height.equalTo(56)
         }
+        
+        //        logoImg.image = UIImage(named: "email_icon")
+        //        logoImg.contentMode = .scaleAspectFit
+        //        logoImg.backgroundColor = .red
+        //        logoImg.snp.makeConstraints { (make) in
+        //            make.top.equalTo(userNameContainer.snp.top).offset(16)
+        //            make.left.equalTo(userNameContainer.snp.left).offset(16)
+        //            make.width.equalTo(24)
+        //            make.right.equalTo(userNameTxtField.snp.right).offset(-16)
+        //            make.bottom.equalTo(userNameContainer.snp.bottom).offset(-16)
+        //            //make.centerX.equalTo(emailContainer)
+        //            //make.centerX.equalToSuperview()
+        //        }
+        
+        // User Name Text Field
+        userNameTxtField.backgroundColor = .clear
+        userNameTxtField.text = "mor_2314"
+        userNameTxtField.textColor = AppColors.backgroundColor
+        userNameTxtField.font = AppFonts.UbuntuRegular14
+        userNameTxtField.snp.makeConstraints { make in
+            make.top.equalTo(userNameContainer.snp.top).offset(8)
+            make.left.equalTo(userNameContainer.snp.left).offset(16)
+            make.right.equalTo(userNameContainer.snp.right).offset(-16)
+            make.bottom.equalTo(userNameContainer.snp.bottom).offset(-8)
+        }
     }
     
-    private func createPasswordView() {
+    private func passwordField() {
+        // Password Container View
         passwordContainer.backgroundColor = .clear
         passwordContainer.addCornerRadius(radius: 8)
         passwordContainer.addBorderView(width: 1, color: AppColors.borderColor)
         passwordContainer.snp.makeConstraints { make in
-            make.top.equalTo(emailContainer.snp.bottom).offset(8)
+            make.top.equalTo(userNameContainer.snp.bottom).offset(8)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
             make.height.equalTo(56)
         }
+        
+        //        logoImg.image = UIImage(named: "password_icon")
+        //        logoImg.contentMode = .scaleAspectFill
+        //        logoImg.backgroundColor = .clear
+        //        logoImg.snp.makeConstraints { (make) in
+        //            make.top.equalTo(titleLabel.snp.top).offset(32)
+        //            make.width.height.equalTo(24)
+        //            //make.centerX.equalToSuperview()
+        //        }
+        
+        // Password Text Field
+        passwordTxtField.backgroundColor = .clear
+        passwordTxtField.text = "83r5^_"
+        passwordTxtField.textColor = AppColors.backgroundColor
+        passwordTxtField.font = AppFonts.UbuntuRegular14
+        passwordTxtField.snp.makeConstraints { make in
+            make.top.equalTo(passwordContainer.snp.top).offset(8)
+            make.left.equalTo(passwordContainer.snp.left).offset(16)
+            make.right.equalTo(passwordContainer.snp.right).offset(-16)
+            make.bottom.equalTo(passwordContainer.snp.bottom).offset(-8)
+        }
     }
     
-    private func createLoginButton() {
+    private func loginRegisterFields() {
+        // Login Button
         loginButton.backgroundColor = AppColors.borderColor
         loginButton.setTitle("GİRİŞ YAP", for: .normal)
         loginButton.tintColor = AppColors.white
@@ -182,9 +225,8 @@ extension LoginViewController {
             make.right.equalToSuperview().offset(-16)
             make.height.equalTo(56)
         }
-    }
-    
-    private func createRegisterLabel() {
+        
+        // Register Label
         registerLabel.textColor = AppColors.backgroundColor
         registerLabel.textAlignment = .left
         registerLabel.font = AppFonts.UbuntuMedium14

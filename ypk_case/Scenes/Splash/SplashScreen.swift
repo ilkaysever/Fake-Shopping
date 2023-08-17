@@ -28,6 +28,13 @@ final class SplashScreen: BaseViewController {
         drawDesign()
     }
     
+    private func openLoginVC() {
+        let vc = LoginViewController()
+        AppDelegate.shared?.setRootViewController(window: UIWindow.key!, viewController: vc, withAnimation: true)
+    }
+    
+
+    
     private func drawDesign() {
         self.indicator.startAnimating()
         DispatchQueue.main.async {
@@ -36,6 +43,7 @@ final class SplashScreen: BaseViewController {
             self.createIndicator()
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                 self.indicator.stopAnimating()
+                self.openLoginVC()
             })
         }
     }

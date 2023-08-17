@@ -18,13 +18,13 @@ class BaseNavigationController: UINavigationController {
     }
     
     func configurateNavigationBar() {
-        let titleStyle: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black, .font: AppFonts.UbuntuMedium16!]
+        let titleStyle: [NSAttributedString.Key: Any] = [.foregroundColor: AppColors.white, .font: AppFonts.UbuntuMedium16!]
         
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.titleTextAttributes = titleStyle
             appearance.shadowColor = .clear
-            appearance.backgroundColor = AppColors.white
+            appearance.backgroundColor = AppColors.tabBarColor
             appearance.setBackIndicatorImage(UIImage(systemName: "arrow.left"), transitionMaskImage: UIImage(systemName: "arrow.left"))
             
             UINavigationBar.appearance().isTranslucent = false

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="169" id="KGk-i7-Jjw" customClass="ProductTableCell" customModule="ypk_case" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-31-QOs">
+                        <rect key="frame" x="8" y="8" width="359" height="153"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ornek_urun" translatesAutoresizingMaskIntoConstraints="NO" id="Sr3-CO-0V1">
+                                <rect key="frame" x="8" y="16.666666666666671" width="90" height="120.00000000000001"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4Dx-yF-vAc"/>
+                                    <constraint firstAttribute="width" constant="90" id="lin-AD-2cU"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="q3C-6q-qMy">
+                                <rect key="frame" x="106" y="16.666666666666664" width="187" height="104.33333333333334"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vft-Cs-anf">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="31.666666666666668"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDe-Dn-ShA">
+                                        <rect key="frame" x="0.0" y="39.666666666666664" width="187" height="64.666666666666686"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"</string>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="110₺" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4l-E7-UqL">
+                                <rect key="frame" x="301" y="16.666666666666671" width="50" height="20.333333333333329"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="r1f-Kb-MA8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cf-Ju-aPI">
+                                <rect key="frame" x="278" y="129" width="81" height="24"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tMK-w0-1wr">
+                                        <rect key="frame" x="2" y="1.9999999999999964" width="20" height="19.666666666666671"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="X6w-rb-K33"/>
+                                            <constraint firstAttribute="width" secondItem="tMK-w0-1wr" secondAttribute="height" multiplier="1:1" id="cJ9-NR-DLQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepete Ekle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C27-hz-XXy">
+                                        <rect key="frame" x="24" y="2" width="55" height="20"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="C27-hz-XXy" secondAttribute="bottom" constant="2" id="5Si-La-D9S"/>
+                                    <constraint firstItem="tMK-w0-1wr" firstAttribute="centerY" secondItem="2cf-Ju-aPI" secondAttribute="centerY" id="9fL-IA-MlT"/>
+                                    <constraint firstAttribute="trailing" secondItem="C27-hz-XXy" secondAttribute="trailing" constant="2" id="DwH-po-nUn"/>
+                                    <constraint firstItem="tMK-w0-1wr" firstAttribute="leading" secondItem="2cf-Ju-aPI" secondAttribute="leading" constant="2" id="RcH-2o-EAK"/>
+                                    <constraint firstItem="C27-hz-XXy" firstAttribute="leading" secondItem="tMK-w0-1wr" secondAttribute="trailing" constant="2" id="apq-1O-UWU"/>
+                                    <constraint firstItem="C27-hz-XXy" firstAttribute="top" secondItem="2cf-Ju-aPI" secondAttribute="top" constant="2" id="mMa-hK-lDt"/>
+                                    <constraint firstAttribute="bottom" secondItem="tMK-w0-1wr" secondAttribute="bottom" constant="2" id="q1O-X5-UqJ"/>
+                                    <constraint firstItem="tMK-w0-1wr" firstAttribute="top" secondItem="2cf-Ju-aPI" secondAttribute="top" constant="2" id="txV-wn-0cZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l4l-E7-UqL" firstAttribute="top" secondItem="q3C-6q-qMy" secondAttribute="top" id="57L-XX-OCz"/>
+                            <constraint firstItem="Sr3-CO-0V1" firstAttribute="leading" secondItem="FFl-31-QOs" secondAttribute="leading" constant="8" id="DTy-rP-9Up"/>
+                            <constraint firstItem="q3C-6q-qMy" firstAttribute="leading" secondItem="Sr3-CO-0V1" secondAttribute="trailing" constant="8" id="E1V-xX-uxD"/>
+                            <constraint firstAttribute="bottom" secondItem="2cf-Ju-aPI" secondAttribute="bottom" id="J0T-lq-BDf"/>
+                            <constraint firstItem="l4l-E7-UqL" firstAttribute="leading" secondItem="q3C-6q-qMy" secondAttribute="trailing" constant="8" id="OWS-XK-jwE"/>
+                            <constraint firstAttribute="trailing" secondItem="2cf-Ju-aPI" secondAttribute="trailing" id="UMw-vF-rM1"/>
+                            <constraint firstItem="q3C-6q-qMy" firstAttribute="top" secondItem="Sr3-CO-0V1" secondAttribute="top" id="dc0-5w-FLF"/>
+                            <constraint firstItem="Sr3-CO-0V1" firstAttribute="centerY" secondItem="FFl-31-QOs" secondAttribute="centerY" id="gZa-gf-p5T"/>
+                            <constraint firstItem="2cf-Ju-aPI" firstAttribute="top" secondItem="q3C-6q-qMy" secondAttribute="bottom" constant="8" id="kLg-ze-iQs"/>
+                            <constraint firstAttribute="trailing" secondItem="l4l-E7-UqL" secondAttribute="trailing" constant="8" id="zxO-dl-HDm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="FFl-31-QOs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="4Fh-oP-EmK"/>
+                    <constraint firstAttribute="bottom" secondItem="FFl-31-QOs" secondAttribute="bottom" constant="8" id="YNO-hh-81Z"/>
+                    <constraint firstAttribute="trailing" secondItem="FFl-31-QOs" secondAttribute="trailing" constant="8" id="Ywh-Vh-hcH"/>
+                    <constraint firstItem="FFl-31-QOs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="l11-Ix-wyb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="180.91603053435114" y="64.436619718309856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="basket.fill" catalog="system" width="128" height="108"/>
+        <image name="ornek_urun" width="1049" height="1500"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

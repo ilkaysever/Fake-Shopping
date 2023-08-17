@@ -8,13 +8,20 @@
 import Foundation
 
 struct Constants {
-    static let BASE_URL = "https://randomuser.me/api/?results="
+    static let BASE_URL = "https://fakestoreapi.com"
 }
 
 enum ErrorType: String, Error {
     case invalidData = "Invalid Data"
     case invalidURL = "Inlavid Url"
     case unknownError = "An error unknown"
+}
+
+enum HttpMethods: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case update = "UPDATE"
 }
 
 class NetworkHelper {

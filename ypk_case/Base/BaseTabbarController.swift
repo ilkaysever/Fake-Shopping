@@ -31,8 +31,8 @@ final class BaseTabbarController: UITabBarController {
         let basketVC = BasketViewController()
         
         // Set Tabbar Item Images & Titles
-        homeVC.tabBarItem.image = UIImage(systemName: "house")
-        basketVC.tabBarItem.image = UIImage(systemName: "basket")
+        homeVC.tabBarItem.image = UIImage(named: "home_fill")
+        basketVC.tabBarItem.image = UIImage(named: "basket_fill")
         
         homeVC.title = "Ana Sayfa"
         basketVC.title = "Sepetim"
