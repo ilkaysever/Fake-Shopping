@@ -23,22 +23,21 @@ final class BasketViewController: BaseViewController {
     
     private func drawDesign() {
         DispatchQueue.main.async {
-            self.view.backgroundColor = .systemPink
-            self.createConfirmButton()
+            self.buyButton()
         }
     }
     
     @objc private func didTappedConfirm() {
-        navigationController?.pushViewController(RegisterViewController(), animated: true)
+        print("satın ala basıldı")
     }
     
 }
 
 extension BasketViewController {
     
-    private func createConfirmButton() {
+    private func buyButton() {
         confirmButton.setTitle("Satın Al", for: .normal)
-        confirmButton.backgroundColor = .blue
+        confirmButton.backgroundColor = AppColors.borderColor
         confirmButton.addCornerRadius(radius: 8)
         confirmButton.addTarget(self, action: #selector(didTappedConfirm), for: .touchUpInside)
         confirmButton.snp.makeConstraints { (make) in

@@ -37,6 +37,12 @@ extension UIView {
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
     }
     
+    func topLeftCornerRadius(radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.clipsToBounds = true
+        self.layer.maskedCorners = [.layerMinXMinYCorner] // Top left corner respectively
+    }
+    
     func bottomCornerRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.clipsToBounds = true
