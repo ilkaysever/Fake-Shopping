@@ -32,7 +32,7 @@ final class ProductTableCell: UITableViewCell, ReusableView, NibLoadableView {
         productImg.setImageUrl(imageUrl: imgUrl)
         titleLabel.text = title
         descLabel.text = desc
-        priceLabel.text = "\(price)" + "$"
+        priceLabel.text = "$" + "\(price)"
     }
     
 }

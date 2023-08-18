@@ -78,7 +78,6 @@ extension ProductDetailViewController {
         }
         
         // Product Image
-        //productImg.image = UIImage(named: "ornek_urun")
         productImg.setImageUrl(imageUrl: detailData.image ?? "")
         productImg.contentMode = .scaleToFill
         productImg.backgroundColor = .clear
@@ -101,7 +100,6 @@ extension ProductDetailViewController {
         }
         
         // Rate Label
-        //rateLabel.text = "8.8"
         rateLabel.text = "\(detailData.rating?.rate ?? 0.0)"
         rateLabel.textAlignment = .left
         rateLabel.textColor = AppColors.white
@@ -112,8 +110,7 @@ extension ProductDetailViewController {
         }
         
         // Price Label
-        //priceLabel.text = "109$"
-        priceLabel.text = "\(detailData.price ?? 0.0)" + "$"
+        priceLabel.text = "$" + "\(detailData.price ?? 0.0)"
         priceLabel.textAlignment = .right
         priceLabel.textColor = AppColors.white
         priceLabel.font = AppFonts.UbuntuMedium16
@@ -127,7 +124,6 @@ extension ProductDetailViewController {
     private func productInfo() {
         
         // Product Title
-        //titleLabel.text = "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
         titleLabel.text = detailData.title
         titleLabel.textAlignment = .left
         titleLabel.numberOfLines = 0
@@ -140,7 +136,6 @@ extension ProductDetailViewController {
         }
         
         // Desc Label
-        //descLabel.text = "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"
         descLabel.text = detailData.description
         descLabel.textAlignment = .left
         descLabel.numberOfLines = 0
