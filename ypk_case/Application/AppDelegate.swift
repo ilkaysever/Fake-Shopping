@@ -20,56 +20,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         configureIQKeyboard()
+        openSplashPage()
         return true
     }
     
-    func setRootViewController(window: UIWindow, viewController: UIViewController, withAnimation: Bool) {
-        if !withAnimation {
-            window.rootViewController = viewController
-            window.makeKeyAndVisible()
-            return
-        }
-        if let snapshot = window.snapshotView(afterScreenUpdates: true) {
-            viewController.view.addSubview(snapshot)
-            window.rootViewController = viewController
-            window.makeKeyAndVisible()
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                snapshot.layer.opacity = 0
-            }, completion: { _ in
-                snapshot.removeFromSuperview()
-            })
-        }
-    }
-    
     func openSplashPage() {
-        let storyboard = UIStoryboard(name: "SplashScreen", bundle: nil)
-        let rootController = storyboard.instantiateInitialViewController() as! SplashScreen
+        let rootViewController = SplashScreen()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootController
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
     
     func openLoginPage() {
-        let storyboard = UIStoryboard(name: "LoginRegister", bundle: nil)
-        let rootController = storyboard.instantiateInitialViewController() as! LoginViewController
+        let rootViewController = LoginViewController()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootController
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
     
     func openMainPage() {
-        setRootViewController(window: UIWindow.key!, viewController: HomeViewController(), withAnimation: true)
-        //        UIView.transition(with: window!, duration: 0.85, options: .transitionFlipFromRight, animations: {
-        //            UIView.performWithoutAnimation {
-        //                let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        //                let rootController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-        //                let navController = BaseNavigationController(rootViewController: rootController)
-        //                if let window = self.window {
-        //                    window.rootViewController = navController
-        //                }
-        //            }
-        //        }, completion: nil)
+        UIView.transition(with: window!, duration: 0.80, options: .transitionFlipFromRight, animations: {
+            UIView.performWithoutAnimation {
+                let tabbar = BaseTabbarController()
+                if let window = self.window {
+                    window.rootViewController = tabbar
+                }
+            }
+        }, completion: nil)
     }
     
     // MARK: - IQKeyboardManager
@@ -82,20 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         IQKeyboardManager.shared().overrideKeyboardAppearance = true
         IQKeyboardManager.shared().keyboardAppearance = .dark
-    }
-    
-    // MARK: UISceneSession Lifecycle
-    
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-    
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
     // MARK: - Core Data stack

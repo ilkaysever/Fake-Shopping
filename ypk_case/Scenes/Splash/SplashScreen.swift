@@ -29,8 +29,9 @@ final class SplashScreen: BaseViewController {
     }
     
     private func openLoginVC() {
-        let vc = LoginViewController()
-        AppDelegate.shared?.setRootViewController(window: UIWindow.key!, viewController: vc, withAnimation: true)
+        AppDelegate.shared?.openLoginPage()
+        //let vc = LoginViewController()
+        //AppDelegate.shared?.setRootViewController(window: UIWindow.key!, viewController: vc, withAnimation: true)
     }
     
     private func drawDesign() {

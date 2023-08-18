@@ -29,17 +29,6 @@ final class LoginViewModel: BaseViewModel {
         }
     }
     
-//    func tutorialRequest(tutorialType: Int, completion: @escaping ResultModelClosure) {
-//        TutorialRequest(trailerVideoType: tutorialType).request { [weak self] response in
-//            guard let self = self else { return }
-//            self.tutorialData = response?.entity
-//            completion(.success(""))
-//        } failure: { error in
-//            completion(.failure(error))
-//            MessagesPresenter.shared.showMessage(image: "custom_alert_wing_icon", backGroundColor: AppColors.red01Dark, title: error.message, detail: "")
-//        }
-//    }
-    
     func getToken() -> String {
         return token
     }
