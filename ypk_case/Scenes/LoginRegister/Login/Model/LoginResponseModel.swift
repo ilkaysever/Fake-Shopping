@@ -13,8 +13,3 @@ struct LoginResponseModel: Codable {
     }
     
 }
-
-
-//{
-//    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTY5MjMwMTkyM30.YMSMWghUtjlwPk--AtJRgo9ngEbJlgv6b1Nw_MoCKkI"
-//}

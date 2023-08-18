@@ -5,7 +5,7 @@
 //  Created by İlkay Sever on 18.08.2023.
 //
 
-struct LoginRequestModel: Encodable {
+struct LoginRequestModel: Codable {
     var username: String
     var password: String
 }

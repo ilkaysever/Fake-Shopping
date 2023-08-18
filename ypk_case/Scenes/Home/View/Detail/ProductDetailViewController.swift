@@ -150,7 +150,6 @@ extension ProductDetailViewController {
     }
     
     private func buttons() {
-        
         // Add To Basket Button
         basketButton.backgroundColor = AppColors.borderColor
         basketButton.setTitle("SEPETE EKLE", for: .normal)
