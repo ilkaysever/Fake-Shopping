@@ -42,7 +42,7 @@ final class ProductDetailViewController: BaseViewController {
     private func configureUI() {
         view.addSubview(containerView)
         containerView.addSubviews(productImg, starImg, rateLabel, titleLabel, descLabel, priceLabel, basketButton)
-        productImg.addSubview(backButton)
+        self.view.addSubview(backButton)
         drawDesign()
     }
     
@@ -58,10 +58,6 @@ final class ProductDetailViewController: BaseViewController {
         print("sepete ekleme fonsiyonu gelicek")
         navigationController?.popViewController(animated: true)
         self.tabBarController?.selectedIndex = 1;
-    }
-    
-    @objc private func popViewController() {
-        navigationController?.popViewController(animated: true)
     }
     
 }
@@ -167,8 +163,7 @@ extension ProductDetailViewController {
         
         // Back Button
         backButton.backgroundColor = AppColors.backgroundColor
-        backButton.alpha = 0.8
-        backButton.isUserInteractionEnabled = true
+        backButton.alpha = 0.5
         backButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         backButton.tintColor = AppColors.white
         backButton.addCornerRadius(radius: 4)

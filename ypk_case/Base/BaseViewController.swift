@@ -44,8 +44,8 @@ class BaseViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-//    @objc func popViewController() {
-//        self.navigationController?.popViewController(animated: true)
-//    }
+    @objc func popViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }
