@@ -193,7 +193,7 @@ extension LoginViewController {
     private func loginRegisterFields() {
         // Login Button
         loginButton.backgroundColor = AppColors.borderColor
-        loginButton.setTitle("GİRİŞ YAP", for: .normal)
+        loginButton.setTitle("Giriş Yap", for: .normal)
         loginButton.tintColor = AppColors.white
         loginButton.titleLabel?.font = AppFonts.UbuntuMedium16
         loginButton.addCornerRadius(radius: 8)

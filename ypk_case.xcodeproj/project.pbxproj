@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				6BE1A6702A8E6138004747C1 /* Core */,
-				6BE1A6712A8E613E004747C1 /* Request */,
+				6BE1A6712A8E613E004747C1 /* Requests */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -286,13 +286,13 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		6BE1A6712A8E613E004747C1 /* Request */ = {
+		6BE1A6712A8E613E004747C1 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				6BE1A6762A8E61BE004747C1 /* LoginRequest.swift */,
 				6BE1A68D2A8EC300004747C1 /* ProducListRequest.swift */,
 			);
-			path = Request;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		6BE1A67C2A8EB4C2004747C1 /* Login */ = {

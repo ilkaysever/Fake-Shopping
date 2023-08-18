@@ -153,7 +153,7 @@ extension ProductDetailViewController {
     private func buttons() {
         // Add To Basket Button
         basketButton.backgroundColor = AppColors.borderColor
-        basketButton.setTitle("SEPETE EKLE", for: .normal)
+        basketButton.setTitle("Sepete Ekle", for: .normal)
         basketButton.tintColor = AppColors.white
         basketButton.titleLabel?.font = AppFonts.UbuntuMedium16
         basketButton.addCornerRadius(radius: 8)
@@ -168,12 +168,13 @@ extension ProductDetailViewController {
         // Back Button
         backButton.backgroundColor = AppColors.backgroundColor
         backButton.alpha = 0.8
+        backButton.isUserInteractionEnabled = true
         backButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         backButton.tintColor = AppColors.white
         backButton.addCornerRadius(radius: 4)
         backButton.addTarget(self, action: #selector(popViewController), for: .touchUpInside)
         backButton.snp.makeConstraints { make in
-            make.top.equalTo(containerView.snp.top).offset(44)
+            make.top.equalTo(containerView.snp.top).offset(50)
             make.left.equalTo(containerView.snp.left).offset(16)
             make.height.width.equalTo(44)
         }
