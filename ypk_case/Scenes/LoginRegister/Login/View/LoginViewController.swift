@@ -151,19 +151,6 @@ extension LoginViewController {
             make.height.equalTo(56)
         }
         
-        //        logoImg.image = UIImage(named: "email_icon")
-        //        logoImg.contentMode = .scaleAspectFit
-        //        logoImg.backgroundColor = .red
-        //        logoImg.snp.makeConstraints { (make) in
-        //            make.top.equalTo(userNameContainer.snp.top).offset(16)
-        //            make.left.equalTo(userNameContainer.snp.left).offset(16)
-        //            make.width.equalTo(24)
-        //            make.right.equalTo(userNameTxtField.snp.right).offset(-16)
-        //            make.bottom.equalTo(userNameContainer.snp.bottom).offset(-16)
-        //            //make.centerX.equalTo(emailContainer)
-        //            //make.centerX.equalToSuperview()
-        //        }
-        
         // User Name Text Field
         userNameTxtField.backgroundColor = .clear
         userNameTxtField.text = "mor_2314"
@@ -188,15 +175,6 @@ extension LoginViewController {
             make.right.equalToSuperview().offset(-16)
             make.height.equalTo(56)
         }
-        
-        //        logoImg.image = UIImage(named: "password_icon")
-        //        logoImg.contentMode = .scaleAspectFill
-        //        logoImg.backgroundColor = .clear
-        //        logoImg.snp.makeConstraints { (make) in
-        //            make.top.equalTo(titleLabel.snp.top).offset(32)
-        //            make.width.height.equalTo(24)
-        //            //make.centerX.equalToSuperview()
-        //        }
         
         // Password Text Field
         passwordTxtField.backgroundColor = .clear

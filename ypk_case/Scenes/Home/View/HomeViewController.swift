@@ -54,6 +54,7 @@ final class HomeViewController: BaseViewController {
         }
     }
     
+    // MARK: - TableView Configure
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self

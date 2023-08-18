@@ -56,6 +56,8 @@ final class ProductDetailViewController: BaseViewController {
     
     @objc private func didTappedBasket() {
         print("sepete ekleme fonsiyonu gelicek")
+        navigationController?.popViewController(animated: true)
+        self.tabBarController?.selectedIndex = 1;
     }
     
     @objc private func popViewController() {

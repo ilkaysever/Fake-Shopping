@@ -19,10 +19,6 @@ final class ProductTableCell: UITableViewCell, ReusableView, NibLoadableView {
         super.awakeFromNib()
         configureUI()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     private func configureUI() {
         containerView.addCornerRadius(radius: 8)
