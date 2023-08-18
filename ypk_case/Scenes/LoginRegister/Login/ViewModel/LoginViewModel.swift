@@ -7,31 +7,38 @@
 
 import Foundation
 
-protocol LoginViewModelProtocol: AnyObject {
-    func loginRequest(username: String, password: String)
-}
-
-final class LoginViewModel: LoginViewModelProtocol {
+final class LoginViewModel: BaseViewModel {
     
     public var didSuccess: ()->() = { }
-    public var didFailure: (String)->() = { _ in }
+    public var didFailure: (Error)->() = { _ in }
     
     private var loginData: LoginResponseModel?
     private var token = ""
     
-    func loginRequest(username: String, password: String) {
-        LoginRequest.shared.loginRequest(reqModel: LoginRequestModel(username: username, password: password)) { [weak self] data in
+    func loginRequest(username: String, password: String, completion: @escaping ResultModelClosure) {
+        LoginRequest.shared.loginRequest(reqModel: LoginRequestModel(username: username,
+                                                                     password: password)) { [weak self] response in
             guard let self = self else { return }
-            if let data = data, let token = data.token {
-                self.loginData = data
+            if let response = response, let token = response.token {
+                self.loginData = response
                 self.token = token
-                print(token)
-                self.didSuccess()
+                completion(.success(""))
             } else {
-                self.didFailure(ErrorType.invalidData.rawValue)
+                completion(.failure(.invalidData))
             }
         }
     }
+    
+//    func tutorialRequest(tutorialType: Int, completion: @escaping ResultModelClosure) {
+//        TutorialRequest(trailerVideoType: tutorialType).request { [weak self] response in
+//            guard let self = self else { return }
+//            self.tutorialData = response?.entity
+//            completion(.success(""))
+//        } failure: { error in
+//            completion(.failure(error))
+//            MessagesPresenter.shared.showMessage(image: "custom_alert_wing_icon", backGroundColor: AppColors.red01Dark, title: error.message, detail: "")
+//        }
+//    }
     
     func getToken() -> String {
         return token

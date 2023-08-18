@@ -42,7 +42,7 @@ final class LoginViewController: BaseViewController {
     // MARK: - Configure UI Elements
     private func configureUI() {
         userNameContainer.addSubviews(emailLogo)
-        view.addSubviews(backgroundImg, welcomeLabel, titleLabel, logoImg, userNameContainer, passwordContainer, loginButton, registerLabel)
+        view.addSubviews(backgroundImg, welcomeLabel, titleLabel, logoImg, userNameContainer, passwordContainer, loginButton)
         userNameContainer.addSubviews(userNameTxtField)
         passwordContainer.addSubviews(passwordTxtField)
         drawDesign()
@@ -60,13 +60,14 @@ final class LoginViewController: BaseViewController {
     
     // MARK: - Request
     private func loginRequest(username: String, password: String) {
-        viewModel.loginRequest(username: username, password: password)
-        viewModel.didSuccess = {
-            //print(self.viewModel.getToken())
-            AppDelegate.shared?.openMainPage()
-        }
-        viewModel.didFailure = { error in
-            print(error)
+        viewModel.loginRequest(username: username, password: password) { result in
+            switch result {
+            case .success(_):
+                print("TOKEN: " + "\(self.viewModel.getToken())")
+                AppDelegate.shared?.openMainPage()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
@@ -118,7 +119,7 @@ extension LoginViewController {
         }
         
         // Brand Title
-        titleLabel.text = "Yapı Kredi Teknoloji Case"
+        titleLabel.text = "Fake Shopping App"
         titleLabel.textAlignment = .center
         titleLabel.textColor = AppColors.backgroundColor
         titleLabel.font = AppFonts.UbuntuBold18
@@ -205,16 +206,16 @@ extension LoginViewController {
         }
         
         // Register Label
-        registerLabel.textColor = AppColors.backgroundColor
-        registerLabel.textAlignment = .left
-        registerLabel.font = AppFonts.UbuntuMedium14
-        let joinUsFullText: String = "Henüz üye olmadınız mı?  Hemen üye ol."
-        registerLabel.halfTextColorChange(fullText: joinUsFullText, changeText: "Hemen üye ol.")
-        registerLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(loginButton.snp.bottom).offset(16)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-        }
+        //        registerLabel.textColor = AppColors.backgroundColor
+        //        registerLabel.textAlignment = .left
+        //        registerLabel.font = AppFonts.UbuntuMedium14
+        //        let joinUsFullText: String = "Henüz üye olmadınız mı?  Hemen üye ol."
+        //        registerLabel.halfTextColorChange(fullText: joinUsFullText, changeText: "Hemen üye ol.")
+        //        registerLabel.snp.makeConstraints { (make) in
+        //            make.top.equalTo(loginButton.snp.bottom).offset(16)
+        //            make.left.equalToSuperview().offset(16)
+        //            make.right.equalToSuperview().offset(-16)
+        //        }
     }
     
 }

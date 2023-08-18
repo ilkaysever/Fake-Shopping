@@ -33,8 +33,6 @@ final class SplashScreen: BaseViewController {
         AppDelegate.shared?.setRootViewController(window: UIWindow.key!, viewController: vc, withAnimation: true)
     }
     
-
-    
     private func drawDesign() {
         self.indicator.startAnimating()
         DispatchQueue.main.async {
@@ -54,9 +52,9 @@ final class SplashScreen: BaseViewController {
 extension SplashScreen {
     
     private func createSplashImg() {
-        splashImg.backgroundColor = .blue
+        splashImg.backgroundColor = AppColors.white
         splashImg.image = UIImage(named: "launch_screen")
-        splashImg.contentMode = .scaleAspectFill
+        splashImg.contentMode = .scaleAspectFit
         splashImg.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.left.equalToSuperview()

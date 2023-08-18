@@ -78,7 +78,8 @@ extension ProductDetailViewController {
         }
         
         // Product Image
-        productImg.setImageUrl(imageUrl: detailData.image ?? "")
+        //productImg.setImageUrl(imageUrl: detailData.image ?? "")
+        productImg.setImage(with: detailData.image ?? "")
         productImg.contentMode = .scaleToFill
         productImg.backgroundColor = .clear
         productImg.snp.makeConstraints { (make) in

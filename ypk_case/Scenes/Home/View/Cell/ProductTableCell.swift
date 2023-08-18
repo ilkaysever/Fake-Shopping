@@ -29,7 +29,7 @@ final class ProductTableCell: UITableViewCell, ReusableView, NibLoadableView {
               let title = productModel?.title,
               let desc = productModel?.description,
               let price = productModel?.price else { return }
-        productImg.setImageUrl(imageUrl: imgUrl)
+        productImg.setImage(with: imgUrl)
         titleLabel.text = title
         descLabel.text = desc
         priceLabel.text = "$" + "\(price)"

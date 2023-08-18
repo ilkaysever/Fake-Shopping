@@ -11,10 +11,11 @@ struct Constants {
     static let BASE_URL = "https://fakestoreapi.com"
 }
 
-enum ErrorType: String, Error {
-    case invalidData = "Invalid Data"
-    case invalidURL = "Inlavid Url"
-    case unknownError = "An error unknown"
+enum ErrorType: Error {
+    case invalidData
+    case invalidURL
+    case unknownError
+    case networkMessage(Error?)
 }
 
 enum HttpMethods: String {

@@ -11,7 +11,7 @@ class LoginRequest {
     
     static let shared = LoginRequest()
     
-    func loginRequest(reqModel: LoginRequestModel, completion: @escaping (LoginResponseModel?) -> ()) {
+    func loginRequest(reqModel: LoginRequestModel, completion: @escaping (LoginResponseModel?) -> Void) {
         guard let url = URL(string: "\(Constants.BASE_URL)" + "/auth/login") else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.headers = ["Content-Type" : "application/json"]

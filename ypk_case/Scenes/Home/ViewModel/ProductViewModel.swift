@@ -14,7 +14,7 @@ protocol ProductViewModelProtocol: AnyObject {
 final class ProductViewModel: ProductViewModelProtocol {
     
     public var didSuccess: ()->() = { }
-    public var didFailure: (String)->() = { _ in }
+    public var didFailure: (Error)->() = { _ in }
     
     private var productData: ProductResponseModel?
     
@@ -26,7 +26,7 @@ final class ProductViewModel: ProductViewModelProtocol {
                 print(productData ?? [])
                 self.didSuccess()
             } else {
-                self.didFailure(ErrorType.invalidData.rawValue)
+                self.didFailure(ErrorType.invalidData)
             }
         }
     }
