@@ -27,7 +27,6 @@ final class LoginViewController: BaseViewController {
     // MARK: - Variables
     let viewModel = LoginViewModel()
     
-    
     // MARK: - ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()

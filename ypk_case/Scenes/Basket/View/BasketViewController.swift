@@ -16,6 +16,7 @@ final class BasketViewController: BaseViewController {
     private let emptyLabel: UILabel = UILabel()
     
     // MARK: - Variables
+    let viewModel = CartViewModel()
     var productCount = 20
     
     // MARK: - ViewController Life Cycle
@@ -27,6 +28,21 @@ final class BasketViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchCartList()
+    }
+    
+    private func fetchCartList() {
+        viewModel.cartListRequest()
+        //        viewModel.group.notify(queue: .main) {
+        //            self.tableView.reloadData()
+        //        }
+        viewModel.didSuccess = {
+            self.productCount = self.viewModel.productList.count
+            self.drawDesign()
+        }
+        viewModel.didFailure = { errror in
+            print(errror)
+        }
     }
     
     private func configureUI() {
@@ -48,12 +64,16 @@ final class BasketViewController: BaseViewController {
                 self.emptyLabel.isHidden = false
             }
         }
+        tableView.reloadData()
     }
     
     @objc private func didTappedConfirm() {
-        print("satın ala basıldı")
         productCount = 0
-        drawDesign()
+        viewModel.productList.removeAll()
+        viewModel.paymentRequest()
+        viewModel.paymentGroup.notify(queue: .main) {
+            self.drawDesign()
+        }
     }
     
     // MARK: - TableView Configure
@@ -78,13 +98,13 @@ final class BasketViewController: BaseViewController {
 extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return viewModel.productList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductTableCell.self), for: indexPath) as? ProductTableCell else { return UITableViewCell() }
-        //let model = viewModel.getProductList()
-        //cell.configureProductCard(model[indexPath.row])
+        let productList = viewModel.productList
+        cell.configureProductCard(productList[indexPath.row].product, quantity: productList[indexPath.row].quantity)
         return cell
     }
     

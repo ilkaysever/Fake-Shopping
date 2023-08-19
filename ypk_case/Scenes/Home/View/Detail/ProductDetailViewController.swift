@@ -16,7 +16,6 @@ final class ProductDetailViewController: BaseViewController {
     private let starImg: UIImageView = UIImageView()
     private let rateLabel: UILabel = UILabel()
     private let priceLabel: UILabel = UILabel()
-    private let basketButton: UIButton = UIButton()
     private let titleLabel: UILabel = UILabel()
     private let descLabel: UILabel = UILabel()
     
@@ -41,7 +40,7 @@ final class ProductDetailViewController: BaseViewController {
     // MARK: - Configure UI Elements
     private func configureUI() {
         view.addSubview(containerView)
-        containerView.addSubviews(productImg, starImg, rateLabel, titleLabel, descLabel, priceLabel, basketButton)
+        containerView.addSubviews(productImg, starImg, rateLabel, titleLabel, descLabel, priceLabel)
         self.view.addSubview(backButton)
         drawDesign()
     }
@@ -50,14 +49,7 @@ final class ProductDetailViewController: BaseViewController {
         DispatchQueue.main.async {
             self.mainView()
             self.productInfo()
-            self.buttons()
         }
-    }
-    
-    @objc private func didTappedBasket() {
-        print("sepete ekleme fonsiyonu gelicek")
-        navigationController?.popViewController(animated: true)
-        self.tabBarController?.selectedIndex = 1;
     }
     
 }
@@ -142,23 +134,6 @@ extension ProductDetailViewController {
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
-        }
-        
-    }
-    
-    private func buttons() {
-        // Add To Basket Button
-        basketButton.backgroundColor = AppColors.borderColor
-        basketButton.setTitle("Sepete Ekle", for: .normal)
-        basketButton.tintColor = AppColors.white
-        basketButton.titleLabel?.font = AppFonts.UbuntuMedium16
-        basketButton.addCornerRadius(radius: 8)
-        basketButton.addTarget(self, action: #selector(didTappedBasket), for: .touchUpInside)
-        basketButton.snp.makeConstraints { make in
-            make.bottom.equalTo(containerView.snp.bottom).offset(-16)
-            make.left.equalTo(containerView.snp.left).offset(16)
-            make.right.equalTo(containerView.snp.right).offset(-16)
-            make.height.equalTo(56)
         }
         
         // Back Button

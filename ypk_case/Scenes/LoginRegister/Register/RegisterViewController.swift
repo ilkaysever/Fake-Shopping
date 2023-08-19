@@ -13,7 +13,6 @@ final class RegisterViewController: BaseViewController {
         super.viewDidLoad()
         navigationTitle(title: "Üye Ol")
         addRightButton(selector: #selector(didTappedDismiss), image: "close_icon")
-        //setupUI()
     }
 
 

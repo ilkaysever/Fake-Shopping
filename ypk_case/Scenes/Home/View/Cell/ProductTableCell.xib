@@ -54,25 +54,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDe-Dn-ShA">
-                                <rect key="frame" x="106" y="56.333333333333321" width="245" height="88.666666666666686"/>
+                                <rect key="frame" x="106" y="56.333333333333329" width="245" height="71.999999999999986"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"</string>
                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet: 12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUR-Tp-Hir">
+                                <rect key="frame" x="281" y="136.33333333333334" width="70" height="14.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Xdg-6t-mp7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="13"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZDe-Dn-ShA" firstAttribute="leading" secondItem="Sr3-CO-0V1" secondAttribute="trailing" constant="8" id="1kH-Vf-9du"/>
+                            <constraint firstItem="ZDe-Dn-ShA" firstAttribute="leading" secondItem="Sr3-CO-0V1" secondAttribute="trailing" constant="8" id="1NZ-QI-kE8"/>
                             <constraint firstItem="Vft-Cs-anf" firstAttribute="top" secondItem="Sr3-CO-0V1" secondAttribute="top" id="2gl-8T-mp7"/>
+                            <constraint firstAttribute="trailing" secondItem="oUR-Tp-Hir" secondAttribute="trailing" constant="8" id="3oB-td-HLy"/>
+                            <constraint firstItem="oUR-Tp-Hir" firstAttribute="top" secondItem="ZDe-Dn-ShA" secondAttribute="bottom" constant="8" id="6Dy-FB-pyd"/>
                             <constraint firstItem="l4l-E7-UqL" firstAttribute="top" secondItem="Vft-Cs-anf" secondAttribute="top" id="BdI-Xm-oQr"/>
                             <constraint firstItem="Sr3-CO-0V1" firstAttribute="leading" secondItem="FFl-31-QOs" secondAttribute="leading" constant="8" id="DTy-rP-9Up"/>
-                            <constraint firstItem="ZDe-Dn-ShA" firstAttribute="top" secondItem="Vft-Cs-anf" secondAttribute="bottom" constant="8" id="bQe-3w-hap"/>
                             <constraint firstItem="Vft-Cs-anf" firstAttribute="leading" secondItem="Sr3-CO-0V1" secondAttribute="trailing" constant="8" id="g1q-qL-dXU"/>
                             <constraint firstItem="Sr3-CO-0V1" firstAttribute="centerY" secondItem="FFl-31-QOs" secondAttribute="centerY" id="gZa-gf-p5T"/>
-                            <constraint firstAttribute="bottom" secondItem="ZDe-Dn-ShA" secondAttribute="bottom" constant="8" id="h2P-eS-IyT"/>
-                            <constraint firstAttribute="trailing" secondItem="ZDe-Dn-ShA" secondAttribute="trailing" constant="8" id="lUG-Kd-RAk"/>
+                            <constraint firstAttribute="trailing" secondItem="ZDe-Dn-ShA" secondAttribute="trailing" constant="8" id="jqw-dM-imN"/>
+                            <constraint firstAttribute="bottom" secondItem="oUR-Tp-Hir" secondAttribute="bottom" constant="2" id="mku-bB-z0f"/>
+                            <constraint firstItem="ZDe-Dn-ShA" firstAttribute="top" secondItem="Vft-Cs-anf" secondAttribute="bottom" constant="8" id="tI6-y3-orQ"/>
                             <constraint firstItem="l4l-E7-UqL" firstAttribute="leading" secondItem="Vft-Cs-anf" secondAttribute="trailing" constant="8" id="yHh-IO-9at"/>
                             <constraint firstAttribute="trailing" secondItem="l4l-E7-UqL" secondAttribute="trailing" constant="8" id="zxO-dl-HDm"/>
                         </constraints>
@@ -93,9 +104,10 @@
                 <outlet property="descLabel" destination="ZDe-Dn-ShA" id="Lrr-mV-MVG"/>
                 <outlet property="priceLabel" destination="l4l-E7-UqL" id="OO2-mF-wFe"/>
                 <outlet property="productImg" destination="Sr3-CO-0V1" id="Mlv-0X-rcL"/>
+                <outlet property="quantityLabel" destination="oUR-Tp-Hir" id="gTf-Vf-Cxz"/>
                 <outlet property="titleLabel" destination="Vft-Cs-anf" id="xQO-P8-ydn"/>
             </connections>
-            <point key="canvasLocation" x="180.91603053435114" y="64.436619718309856"/>
+            <point key="canvasLocation" x="180.91603053435114" y="63.732394366197184"/>
         </tableViewCell>
     </objects>
     <resources>

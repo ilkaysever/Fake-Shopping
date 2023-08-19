@@ -10,7 +10,6 @@ import UIKit
 final class AppFonts {
     
     // Ubuntu-Bold
-    
     static var UbuntuBold10 = UIFont(name: "Ubuntu-Bold", size: 10)
     static var UbuntuBold12 = UIFont(name: "Ubuntu-Bold", size: 12)
     static var UbuntuBold14 = UIFont(name: "Ubuntu-Bold", size: 14)
@@ -21,7 +20,6 @@ final class AppFonts {
     static var UbuntuBold24 = UIFont(name: "Ubuntu-Bold", size: 24)
     
     // Ubuntu-Medium
-    
     static var UbuntuMedium10 = UIFont(name: "Ubuntu-Medium", size: 10)
     static var UbuntuMedium12 = UIFont(name: "Ubuntu-Medium", size: 12)
     static var UbuntuMedium14 = UIFont(name: "Ubuntu-Medium", size: 14)
@@ -30,7 +28,6 @@ final class AppFonts {
     static var UbuntuMedium20 = UIFont(name: "Ubuntu-Medium", size: 20)
     
     // Ubuntu-Regular
-    
     static var UbuntuRegular10 = UIFont(name: "Ubuntu-Regular", size: 10)
     static var UbuntuRegular12 = UIFont(name: "Ubuntu-Regular", size: 12)
     static var UbuntuRegular14 = UIFont(name: "Ubuntu-Regular", size: 14)

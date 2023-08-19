@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginRequest {
+final class LoginRequest {
     
     static let shared = LoginRequest()
     

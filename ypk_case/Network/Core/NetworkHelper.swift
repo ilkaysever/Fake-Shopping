@@ -23,6 +23,7 @@ enum HttpMethods: String {
     case post = "POST"
     case put = "PUT"
     case update = "UPDATE"
+    case delete = "DELETE"
 }
 
 class NetworkHelper {

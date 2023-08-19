@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+final class BaseNavigationController: UINavigationController {
     
     static let shared = BaseNavigationController()
     
