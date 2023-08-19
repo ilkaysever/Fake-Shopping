@@ -17,7 +17,6 @@ final class BasketViewController: BaseViewController {
     
     // MARK: - Variables
     let viewModel = CartViewModel()
-    var productCount = 20
     
     // MARK: - ViewController Life Cycle
     override func viewDidLoad() {
@@ -28,39 +27,40 @@ final class BasketViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initalUI()
         fetchCartList()
     }
     
     private func fetchCartList() {
         viewModel.cartListRequest()
-        //        viewModel.group.notify(queue: .main) {
-        //            self.tableView.reloadData()
-        //        }
-        viewModel.didSuccess = {
-            self.productCount = self.viewModel.productList.count
-            self.drawDesign()
+        viewModel.didProductSuccess = {
+            DispatchQueue.main.async {
+                self.drawDesign()
+                self.tableView.reloadData()
+            }
         }
-        viewModel.didFailure = { errror in
-            print(errror)
-        }
+    }
+    
+    private func initalUI() {
+        confirmButton.isHidden = true
+        tableView.isHidden = true
+        emptyLabel.isHidden = true
     }
     
     private func configureUI() {
         view.addSubviews(emptyLabel, tableView, confirmButton)
-        drawDesign()
     }
     
     private func drawDesign() {
-        confirmButton.isHidden = true
-        tableView.isHidden = true
-        emptyLabel.isHidden = true
         DispatchQueue.main.async {
             self.emptyUI()
             self.buyButton()
-            if self.productCount != 0 {
+            if !self.viewModel.productList.isEmpty {
                 self.tableView.isHidden = false
                 self.confirmButton.isHidden = false
             } else {
+                self.tableView.isHidden = true
+                self.confirmButton.isHidden = true
                 self.emptyLabel.isHidden = false
             }
         }
@@ -68,10 +68,9 @@ final class BasketViewController: BaseViewController {
     }
     
     @objc private func didTappedConfirm() {
-        productCount = 0
-        viewModel.productList.removeAll()
         viewModel.paymentRequest()
-        viewModel.paymentGroup.notify(queue: .main) {
+        viewModel.didPaymentSuccess = {
+            self.viewModel.productList.removeAll()
             self.drawDesign()
         }
     }
@@ -81,6 +80,7 @@ final class BasketViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = AppColors.tabBarColor
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.register(ProductTableCell.self)

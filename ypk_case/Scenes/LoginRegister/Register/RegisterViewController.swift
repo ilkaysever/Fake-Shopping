@@ -15,5 +15,4 @@ final class RegisterViewController: BaseViewController {
         addRightButton(selector: #selector(didTappedDismiss), image: "close_icon")
     }
 
-
 }

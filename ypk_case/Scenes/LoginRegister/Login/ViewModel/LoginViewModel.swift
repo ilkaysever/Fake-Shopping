@@ -9,9 +9,6 @@ import Foundation
 
 final class LoginViewModel: BaseViewModel {
     
-    public var didSuccess: ()->() = { }
-    public var didFailure: (Error)->() = { _ in }
-    
     private var loginData: LoginResponseModel?
     private var token = ""
     

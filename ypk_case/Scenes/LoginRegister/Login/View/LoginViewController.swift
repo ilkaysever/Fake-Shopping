@@ -153,6 +153,7 @@ extension LoginViewController {
         
         // User Name Text Field
         userNameTxtField.backgroundColor = .clear
+        userNameTxtField.isUserInteractionEnabled = false
         userNameTxtField.text = "mor_2314"
         userNameTxtField.textColor = AppColors.backgroundColor
         userNameTxtField.font = AppFonts.UbuntuRegular14
@@ -178,6 +179,7 @@ extension LoginViewController {
         
         // Password Text Field
         passwordTxtField.backgroundColor = .clear
+        passwordTxtField.isUserInteractionEnabled = false
         passwordTxtField.text = "83r5^_"
         passwordTxtField.textColor = AppColors.backgroundColor
         passwordTxtField.font = AppFonts.UbuntuRegular14

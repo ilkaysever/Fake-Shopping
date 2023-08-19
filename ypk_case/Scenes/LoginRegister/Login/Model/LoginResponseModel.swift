@@ -6,6 +6,7 @@
 //
 
 struct LoginResponseModel: Codable {
+    
     var token: String?
     
     enum CodingKeys: String, CodingKey {
