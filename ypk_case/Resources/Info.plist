@@ -9,7 +9,6 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
 		<string>Ubuntu-Bold.ttf</string>
 		<string>Ubuntu-BoldItalic.ttf</string>
 		<string>Ubuntu-Italic.ttf</string>
